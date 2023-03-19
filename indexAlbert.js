@@ -14,9 +14,7 @@ addTitle();
 // 2
 /* Wenn der Abschnitt `.info` ein Element mit der Klasse `.info-package` enthält, wähle alle `.package-title` Elemente aus und gib dem jeweils vorhergehenden Geschwisterelement einen Rahmen. */
 
-
 const addInfoBorder = () => {
-
   infoSection.forEach((section) => {
     const packageTitle = section.querySelectorAll('.package-title');
     packageTitle.forEach((title) => {
@@ -33,20 +31,28 @@ addInfoBorder();
 
 const addLabelBorder = () => {
   const border = '3px solid';
+  const colors = {
+    mild: 'yellow',
+    intense: 'orange',
+    extreme: 'red',
+  };
 
   infoSection.forEach((section) => {
+    
     const mild = section.querySelector('.mild');
-    mild.style.borderBottom = `${border} yellow`;
-
+    mild.style.borderBottom = `${border} ${colors.mild}`;
+    
     const intense = section.querySelector('.intense');
-    intense.style.borderBottom = `${border} orange`;
-
+    intense.style.borderBottom = `${border} ${colors.intense}`;
+    
     const extreme = section.querySelector('.extreme');
-    extreme.style.borderBottom = `${border} red`;
+    extreme.style.borderBottom = `${border} ${colors.extreme}`;
+
   });
 };
 
 addLabelBorder();
+
 
 // 4
 

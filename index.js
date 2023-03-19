@@ -30,6 +30,8 @@ for (let i = 0; i < infoSection.children.length; i++) {
     }
 }
 
+
+
 // 3
 for (let i = 0; i < infoSection.children.length; i++) {
     let infoSecChildChildren = infoSection.children[i].children;

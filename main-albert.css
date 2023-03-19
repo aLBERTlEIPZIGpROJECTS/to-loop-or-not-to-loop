@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* mixins */
+
+/*
+@mixin wrap-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  } 
+
+*/
+
+/* typography */
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+/* layout-components */
+
+header {
+  text-align: center;
+}
+
+footer {
+  border-bottom: 1px solid grey;
+  padding-bottom: 1rem;
+  height: 10rem;
+  background-color: #072f5f;
+}
+
+/* components */
+
+.nav-list {
+  background-color: #072f5f;
+  height: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+
+.info {
+  padding-bottom: 1.5rem;
+  margin: 1rem;
+}
+
+.info__image {
+  height: 12rem;
+  width: 18rem;
+}
+
+.info__package {
+  border-bottom: 2px solid #072f5f;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prices {
+  margin-bottom: 1rem;
+}
+
+.single-price {
+  height: 7rem;
+  width: 7rem;
+  border: 5px solid #072f5f;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* die könntent @include wrap-container nutzen */
+
+.links,
+.prices,
+.info,
+.site-map {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* auch ein Fall für ein @mixin */
+
+.links,
+.site-map {
+  height: 50%;
+  list-style: none;
+  color: white;
+}
+
+/* 
+man kann auch ein scss function dafür nutzen. Sollte jetzt testen, ich denke aber, dass es funktioniert
+
+$colors: (
+  yellow: 2px solid yellow,
+  orange: 2px solid orange,
+  red: 2px solid red,
+  gray: 5px solid gray
+);
+
+@function border-bottom($color) {
+  @return border-bottom: map-get($colors, $color);
+}
+
+*/
+
+.borderYellow {
+  border-bottom: 2px solid yellow;
+}
+
+.borderOrange {
+  border-bottom: 2px solid orange;
+}
+
+.borderRed {
+  border-bottom: 2px solid red;
+}
+
+.borderGray {
+  border-bottom: 5px solid grey;
+}
+
+.imgBorder {
+  border: 2px solid #072f5f;
+}
